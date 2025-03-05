@@ -1,0 +1,16 @@
+name: "Call callee"
+on: 
+  workflow_dispatch:
+
+jobs:
+  make-call:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - run: |
+          gh workflow run -R github.com/RyanSusana/callee call.yml -f 'repo_token=${{ secrets.GITHUB_TOKEN }}''
+          
+        env:
+          GH_TOKEN: ${{ secrets.SHARED_APP_KEY }}
