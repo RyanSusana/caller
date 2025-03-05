@@ -10,7 +10,7 @@ jobs:
       issues: write
     steps:
       - run: |
-          gh workflow run -R github.com/RyanSusana/callee call.yml -f 'repo_token=${{ secrets.GITHUB_TOKEN }}''
+          gh workflow run -R github.com/RyanSusana/callee call.yml -f 'repo_token=${{ secrets.GITHUB_TOKEN }}'
           
         env:
           GH_TOKEN: ${{ secrets.SHARED_APP_KEY }}
