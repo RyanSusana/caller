@@ -6,7 +6,7 @@ jobs:
   make-call:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       issues: write
     steps:
       - run: |
