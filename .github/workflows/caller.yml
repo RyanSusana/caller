@@ -11,6 +11,6 @@ jobs:
     steps:
       - run: |
           gh workflow run -R github.com/RyanSusana/callee call.yml -f 'repo_token=${{ secrets.GITHUB_TOKEN }}'
-          
+          sleep 30s
         env:
           GH_TOKEN: ${{ secrets.SHARED_APP_KEY }}
